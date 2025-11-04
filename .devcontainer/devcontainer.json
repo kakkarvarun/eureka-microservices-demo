@@ -1,5 +1,7 @@
 {
-  "name": "Java 17 (Maven included)",
-  "image": "mcr.microsoft.com/devcontainers/java:1-17-bullseye",
+  "name": "Java 17 + Maven (custom)",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "postCreateCommand": "mvn -v && java -version"
 }
