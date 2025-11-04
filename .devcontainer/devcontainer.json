@@ -1,5 +1,10 @@
 {
   "name": "Java 17 & Maven",
   "image": "mcr.microsoft.com/devcontainers/java:1-17-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/maven:1": {
+      "version": "latest"
+    }
+  },
   "postCreateCommand": "mvn -v && java -version"
 }
