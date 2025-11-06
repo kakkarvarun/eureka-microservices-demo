@@ -8,18 +8,18 @@ services:
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
     depends_on: [eureka]
-    ports: ["8000:8000"]
+    ports: ["9000:9000"]
 
   currency:
     build: ./currency-service
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
     depends_on: [eureka, exchange]
-    ports: ["8100:8100"]
-  
+    ports: ["9100:9100"]
+
   audit:
     build: ./audit-service
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka/
-    depends_on: [eureka, exchange]
+    depends_on: [eureka]
     ports: ["8200:8200"]
