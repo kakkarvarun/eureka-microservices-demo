@@ -35,11 +35,21 @@ mvn -q -DskipTests spring-boot:run
    /currency/convert/from/USD/to/INR/amount/10
 You should see JSON output with convertedAmount.
 
+Ports used by the apps (as implemented here):
+
+Eureka → 8761
+
+Exchange → 9000
+
+Currency → 9100
+
+Audit → 8200
+
 Endpoints
 
 Eureka: http://localhost:8761/ (dashboard)
 
-Convert: http://localhost:8100/currency/convert/from/{from}/to/{to}/amount/{amount}
+Convert: http://localhost:9100/currency/convert/from/{from}/to/{to}/amount/{amount}
 
 Notes
 
